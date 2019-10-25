@@ -59,6 +59,9 @@ extern	double	atof();		/* Only called when result known to be ok */
 #endif
 extern	int	errno;
 
+#include <stdio.h>
+#include <string.h>
+
 double strtod(str, ptr)
     char *str;
     char **ptr;
