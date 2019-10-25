@@ -62,6 +62,7 @@ extern void initthread();
 extern void initcStringIO();
 extern void initcPickle();
 extern void initpcre();
+extern void initposix();
 #ifdef WIN32
 extern void initmsvcrt();
 extern void initwinsound();
@@ -74,6 +75,7 @@ extern void PyMarshal_Init();
 extern void initimp();
 
 struct _inittab _PyImport_Inittab[] = {
+        //{"posix", initposix},
 /*
         {"array", initarray},
         {"binascii", initbinascii},
@@ -83,8 +85,6 @@ struct _inittab _PyImport_Inittab[] = {
         {"math", initmath},
         {"md5", initmd5},
         {"new", initnew},
-        //{"nt", initnt}, /* Use the NT os functions, not posix */
-/*
         {"operator", initoperator},
         {"regex", initregex},
         {"rgbimg", initrgbimg},
