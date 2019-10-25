@@ -127,7 +127,7 @@ PyArg_VaParse(args, format, va)
 #ifdef VA_LIST_IS_ARRAY
 	memcpy(lva, va, sizeof(va_list));
 #else
-	lva = &va;
+	lva = va;
 #endif
 
 	return vgetargs1(args, format, *lva, 0);

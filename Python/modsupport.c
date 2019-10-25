@@ -413,7 +413,7 @@ Py_VaBuildValue(format, va)
 #ifdef VA_LIST_IS_ARRAY
 	memcpy(lva, va, sizeof(va_list));
 #else
-	lva = &va;
+	lva = va;
 #endif
 
 	if (n < 0)
