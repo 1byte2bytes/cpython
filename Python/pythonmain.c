@@ -165,7 +165,7 @@ PYTHONPATH   : colon-separated list of directories prefixed to the\n\
 
 	if (verbose ||
 	    (command == NULL && filename == NULL && isatty((int)fileno(fp))))
-		fprintf(stderr, "Python %s\n%s\n",
+		fprintf(stderr, "LottePy %s\n%s\n",
 			getversion(), getcopyright());
 	
 	if (filename != NULL) {

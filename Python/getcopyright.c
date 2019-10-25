@@ -36,5 +36,5 @@ PERFORMANCE OF THIS SOFTWARE.
 const char *
 Py_GetCopyright()
 {
-	return "Copyright 1991-1995 Stichting Mathematisch Centrum, Amsterdam";
+	return "Copyright 2019 Lotte Erickson\r\nCopyright 1991-1995 Stichting Mathematisch Centrum, Amsterdam";
 }
