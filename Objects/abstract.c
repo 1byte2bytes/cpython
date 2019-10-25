@@ -1392,7 +1392,7 @@ PyObject_CallFunction(PyObject *callable, char *format, ...)
 	}
 
 	if (format)
-		args = Py_VaBuildValue(format, va);
+		args = Py_VaBuildValue(format, &va);
 	else
 		args = PyTuple_New(0);
 
@@ -1459,7 +1459,7 @@ PyObject_CallMethod(PyObject *o, char *name, char *format, ...)
 	}
 
 	if (format && *format)
-		args = Py_VaBuildValue(format, va);
+		args = Py_VaBuildValue(format, &va);
 	else
 		args = PyTuple_New(0);
 
