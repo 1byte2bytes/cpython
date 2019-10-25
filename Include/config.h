@@ -45,6 +45,8 @@
 #define	HAVE_UNISTD_H 1  		/* <unistd.h> exists */
 #define	HAVE_UTIME_H 1  		/* <utime.h> exists */
 
+#define HAVE_HYPOT 1
+
 #define	HAVE_SYS_PARAM_H 1  	/* <sys/param.h> exists */
 /* #undef	HAVE_SYS_SELECT_H */  	/* <sys/select.h> exists */
 #define	HAVE_SYS_TIMES_H 1  	/* <sys/times.h> exists */
