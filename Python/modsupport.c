@@ -404,16 +404,16 @@ PyObject *Py_BuildValue(va_alist) va_dcl
 PyObject *
 Py_VaBuildValue(format, va)
 	char *format;
-	va_list va;
+	va_list *va;
 {
 	char *f = format;
 	int n = countformat(f, '\0');
-	va_list lva;
+	va_list *lva;
 
 #ifdef VA_LIST_IS_ARRAY
 	memcpy(lva, va, sizeof(va_list));
 #else
-	lva = va;
+	lva = &va;
 #endif
 
 	if (n < 0)
@@ -424,7 +424,7 @@ Py_VaBuildValue(format, va)
 	}
 	if (n == 1)
 		return do_mkvalue(&f, &lva);
-	return do_mktuple(&f, &lva, '\0', n);
+	return do_mktuple(&f, *lva, '\0', n);
 }
 
 

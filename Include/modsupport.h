@@ -58,8 +58,8 @@ extern DL_IMPORT(PyObject *) Py_BuildValue();
 
 #endif
 
-extern DL_IMPORT(int) PyArg_VaParse Py_PROTO((PyObject *, char *, va_list));
-extern DL_IMPORT(PyObject *) Py_VaBuildValue Py_PROTO((char *, va_list));
+extern DL_IMPORT(int) PyArg_VaParse Py_PROTO((PyObject *, char *, va_list *va_list));
+extern DL_IMPORT(PyObject *) Py_VaBuildValue Py_PROTO((char *, va_list *va_list));
 
 #define PYTHON_API_VERSION 1007
 #define PYTHON_API_STRING "1007"

@@ -43,7 +43,7 @@ PERFORMANCE OF THIS SOFTWARE.
 
 int PyArg_Parse Py_PROTO((PyObject *, char *, ...));
 int PyArg_ParseTuple Py_PROTO((PyObject *, char *, ...));
-int PyArg_VaParse Py_PROTO((PyObject *, char *, va_list));
+int PyArg_VaParse Py_PROTO((PyObject *, char *, va_list *va_list));
 
 int PyArg_ParseTupleAndKeywords Py_PROTO((PyObject *, PyObject *,
 				       char *, char **, ...));
@@ -120,17 +120,17 @@ int
 PyArg_VaParse(args, format, va)
 	PyObject *args;
 	char *format;
-	va_list va;
+	va_list *va;
 {
-	va_list lva;
+	va_list *lva;
 
 #ifdef VA_LIST_IS_ARRAY
 	memcpy(lva, va, sizeof(va_list));
 #else
-	lva = va;
+	lva = &va;
 #endif
 
-	return vgetargs1(args, format, &lva, 0);
+	return vgetargs1(args, format, *lva, 0);
 }
 
 
