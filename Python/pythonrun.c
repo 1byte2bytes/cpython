@@ -78,6 +78,7 @@ int Py_InteractiveFlag; /* Needed by Py_FdIsInteractive() below */
 int Py_NoSiteFlag; /* Suppress 'import site' */
 int Py_UseClassExceptionsFlag = 1; /* Needed by bltinmodule.c */
 int Py_FrozenFlag; /* Needed by getpath.c */
+int Py_SuppressPrintingFlag; /* Needed by ceval.c */
 
 static int initialized = 0;
 
