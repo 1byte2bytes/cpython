@@ -76,6 +76,8 @@ extern void initimp();
 
 struct _inittab _PyImport_Inittab[] = {
         //{"posix", initposix},
+        {"cmath", initcmath},
+        {"math", initmath},
 /*
         {"array", initarray},
         {"binascii", initbinascii},
