@@ -28,6 +28,11 @@ OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 #include <stddef.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+
+#include "rename2.h"
 
 extern int debugging; /* Needed in parser.c, declared in pythonrun.c */
 extern int verbose; /* Needed in import.c, declared in pythonrun.c */
@@ -159,7 +164,7 @@ PYTHONPATH   : colon-separated list of directories prefixed to the\n\
 		filename = argv[optind];
 
 	if (verbose ||
-	    command == NULL && filename == NULL && isatty((int)fileno(fp)))
+	    (command == NULL && filename == NULL && isatty((int)fileno(fp))))
 		fprintf(stderr, "Python %s\n%s\n",
 			getversion(), getcopyright());
 	
