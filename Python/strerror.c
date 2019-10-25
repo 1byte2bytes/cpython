@@ -34,8 +34,8 @@ PERFORMANCE OF THIS SOFTWARE.
 
 #include <stdio.h>
 
-extern int sys_nerr;
-extern char *sys_errlist[];
+//extern int sys_nerr;
+//extern char *sys_errlist[];
 
 char *
 strerror(err)

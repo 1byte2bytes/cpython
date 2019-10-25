@@ -24,7 +24,10 @@ OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 /* Python interpreter main program */
 
-#include "allobjects.h"
+//#include "allobjects.h"
+
+#include <stddef.h>
+#include <stdio.h>
 
 extern int debugging; /* Needed in parser.c, declared in pythonrun.c */
 extern int verbose; /* Needed in import.c, declared in pythonrun.c */
