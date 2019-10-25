@@ -49,7 +49,7 @@ extern char *getversion();
 extern char *getcopyright();
 
 int
-realmain(argc, argv)
+main(argc, argv)
 	int argc;
 	char **argv;
 {
