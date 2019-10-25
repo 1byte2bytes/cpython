@@ -130,7 +130,7 @@ PyArg_VaParse(args, format, va)
 	lva = va;
 #endif
 
-	return vgetargs1(args, format, *lva, 0);
+	return vgetargs1(args, format, lva, 0);
 }
 
 

@@ -396,7 +396,7 @@ PyObject *Py_BuildValue(va_alist) va_dcl
 	va_start(va);
 	format = va_arg(va, char *);
 #endif
-	retval = Py_VaBuildValue(format, va);
+	retval = Py_VaBuildValue(format, &va);
 	va_end(va);
 	return retval;
 }
@@ -423,8 +423,8 @@ Py_VaBuildValue(format, va)
 		return Py_None;
 	}
 	if (n == 1)
-		return do_mkvalue(&f, &lva);
-	return do_mktuple(&f, *lva, '\0', n);
+		return do_mkvalue(&f, lva);
+	return do_mktuple(&f, lva, '\0', n);
 }
 
 
@@ -449,7 +449,7 @@ PyEval_CallFunction(obj, format, va_alist)
 	va_start(vargs);
 #endif
 
-	args = Py_VaBuildValue(format, vargs);
+	args = Py_VaBuildValue(format, &vargs);
 	va_end(vargs);
 
 	if (args == NULL)
@@ -489,7 +489,7 @@ PyEval_CallMethod(obj, methodname, format, va_alist)
 	va_start(vargs);
 #endif
 
-	args = Py_VaBuildValue(format, vargs);
+	args = Py_VaBuildValue(format, &vargs);
 	va_end(vargs);
 
 	if (args == NULL) {
