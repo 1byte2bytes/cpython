@@ -384,7 +384,7 @@ cPickle_ErrFormat(va_alist) va_dcl {
   format   = va_arg(va, char *);
 #endif
   
-  if (format) args = Py_VaBuildValue(format, va);
+  if (format) args = Py_VaBuildValue(format, &va);
   va_end(va);
   if (format && ! args) return NULL;
   if (stringformat && !(retval=PyString_FromString(stringformat))) return NULL;
