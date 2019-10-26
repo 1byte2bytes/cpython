@@ -38,6 +38,8 @@
 
 #define HAVE_STDARG_PROTOTYPES 1
 
+#define WITH_THREAD 1
+
 /* #undef	HAVE_DLFCN_H */  		/* <dlfcn.h> exists */
 #define	HAVE_SIGNAL_H 1  		/* <signal.h> exists */
 #define	HAVE_STDARG_H 1  		/* <stdarg.h> exists (else need <varargs.h>) */

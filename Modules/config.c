@@ -53,7 +53,7 @@ extern void initrotor();
 extern void initsignal();
 extern void initsha();
 extern void initselect();
-extern void init_socket();
+extern void initsocket();
 extern void initsoundex();
 extern void initstrop();
 extern void initstruct();
@@ -93,19 +93,17 @@ struct _inittab _PyImport_Inittab[] = {
         {"cStringIO", initcStringIO},
         {"cPickle", initcPickle},
         {"pcre", initpcre},
+        {"_socket", initsocket},
+        {"select", initselect},
+        {"thread", initthread},
 /*
         {"sha", initsha},
         {"imageop", initimageop},
         {"rgbimg", initrgbimg},
         {"signal", initsignal}, // This one breaks control+c in the terminal
 
-#ifdef USE_SOCKET
-        {"_socket", init_socket},
-        {"select", initselect},
-#endif
-
 #ifdef WITH_THREAD
-        {"thread", initthread},
+
 #endif
 
 #ifdef WIN32

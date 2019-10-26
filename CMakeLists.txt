@@ -14,7 +14,8 @@ Objects/sliceobject.c Objects/stringobject.c Objects/tupleobject.c Objects/typeo
 add_library(Modules Modules/getpath.c Modules/getbuildinfo.c Modules/config.c Modules/cmathmodule.c Modules/mathmodule.c
 Modules/md5module.c Modules/md5c.c Modules/arraymodule.c Modules/binascii.c Modules/errnomodule.c Modules/newmodule.c
 Modules/operator.c Modules/regexmodule.c Modules/regexpr.c Modules/rotormodule.c Modules/timemodule.c Modules/soundex.c
-Modules/stropmodule.c Modules/structmodule.c Modules/cStringIO.c Modules/cPickle.c Modules/pcremodule.c Modules/pypcre.c)
+Modules/stropmodule.c Modules/structmodule.c Modules/cStringIO.c Modules/cPickle.c Modules/pcremodule.c Modules/pypcre.c
+Modules/socketmodule.c Modules/selectmodule.c Modules/threadmodule.c)
 
 add_executable(LottePy1 Python/atof.c Python/bltinmodule.c Python/ceval.c Python/compile.c Python/dup2.c Python/errors.c Python/fmod.c
 Python/frozen.c Python/frozenmain.c Python/getargs.c Python/getcompiler.c Python/getcopyright.c Python/getcwd.c Python/getmtime.c
