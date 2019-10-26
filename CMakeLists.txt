@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.9)
-project(LottePy1)
+project(LottePy1 C)
 include_directories(Include/)
 
 add_library(Parser Parser/acceler.c Parser/bitset.c Parser/firstsets.c Parser/grammar.c Parser/grammar1.c Parser/intrcheck.c
@@ -28,4 +28,6 @@ target_link_libraries(LottePy1 Parser)
 target_link_libraries(LottePy1 Objects)
 target_link_libraries(LottePy1 Modules)
 
+#target_compile_options(LottePy1 PRIVATE -fsanitize=undefined,address)
+#target_link_options(LottePy1 PRIVATE -fsanitize=undefined,address)
 #target_compile_options(LottePy1 PRIVATE -Wall -Wextra)
