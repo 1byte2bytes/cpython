@@ -76,35 +76,38 @@ extern void initimp();
 
 struct _inittab _PyImport_Inittab[] = {
         //{"posix", initposix},
-        {"cmath", initcmath},
-        {"math", initmath},
-        {"md5", initmd5},
-/*
-        {"sha", initsha},
         {"array", initarray},
         {"binascii", initbinascii},
+        {"cmath", initcmath},
         {"errno", initerrno},
-        {"imageop", initimageop},
+        {"math", initmath},
+        {"md5", initmd5},
         {"new", initnew},
         {"operator", initoperator},
         {"regex", initregex},
-        {"rgbimg", initrgbimg},
         {"rotor", initrotor},
-        {"signal", initsignal},
+        {"time", inittime},
+        {"soundex", initsoundex},
+        {"strop", initstrop},
+        {"struct", initstruct},
+        {"cStringIO", initcStringIO},
+        {"cPickle", initcPickle},
+        {"pcre", initpcre},
+/*
+        {"sha", initsha},
+        {"imageop", initimageop},
+        {"rgbimg", initrgbimg},
+        {"signal", initsignal}, // This one breaks control+c in the terminal
+
 #ifdef USE_SOCKET
         {"_socket", init_socket},
         {"select", initselect},
 #endif
-        {"soundex", initsoundex},
-        {"strop", initstrop},
-        {"struct", initstruct},
-        {"time", inittime},
+
 #ifdef WITH_THREAD
         {"thread", initthread},
 #endif
-        {"cStringIO", initcStringIO},
-        {"cPickle", initcPickle},
-        {"pcre", initpcre},
+
 #ifdef WIN32
 	{"msvcrt", initmsvcrt},
 	{"winsound", initwinsound},

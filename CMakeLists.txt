@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 2.8.9)
 project(LottePy1)
 include_directories(Include/)
 
-add_library(Parser Parser/acceler.c Parser/bitset.c Parser/firstsets.c Parser/grammar.c Parser/grammar1.c Parser/intrcheck.c 
+add_library(Parser Parser/acceler.c Parser/bitset.c Parser/firstsets.c Parser/grammar.c Parser/grammar1.c Parser/intrcheck.c
 Parser/listnode.c Parser/metagrammar.c Parser/myreadline.c Parser/node.c Parser/parser.c Parser/parsetok.c Parser/pgen.c
 Parser/printgrammar.c Parser/tokenizer.c)
 
@@ -12,7 +12,9 @@ Objects/listobject.c Objects/longobject.c Objects/methodobject.c Objects/moduleo
 Objects/sliceobject.c Objects/stringobject.c Objects/tupleobject.c Objects/typeobject.c)
 
 add_library(Modules Modules/getpath.c Modules/getbuildinfo.c Modules/config.c Modules/cmathmodule.c Modules/mathmodule.c
-Modules/md5module.c Modules/md5c.c)
+Modules/md5module.c Modules/md5c.c Modules/arraymodule.c Modules/binascii.c Modules/errnomodule.c Modules/newmodule.c
+Modules/operator.c Modules/regexmodule.c Modules/regexpr.c Modules/rotormodule.c Modules/timemodule.c Modules/soundex.c
+Modules/stropmodule.c Modules/structmodule.c Modules/cStringIO.c Modules/cPickle.c Modules/pcremodule.c Modules/pypcre.c)
 
 add_executable(LottePy1 Python/atof.c Python/bltinmodule.c Python/ceval.c Python/compile.c Python/dup2.c Python/errors.c Python/fmod.c
 Python/frozen.c Python/frozenmain.c Python/getargs.c Python/getcompiler.c Python/getcopyright.c Python/getcwd.c Python/getmtime.c
