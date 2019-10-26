@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.9)
-project(Python)
+project(LottePy1)
 include_directories(Include/)
 
 add_library(Parser Parser/acceler.c Parser/bitset.c Parser/firstsets.c Parser/grammar.c Parser/grammar1.c Parser/intrcheck.c 
