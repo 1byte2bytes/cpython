@@ -23,3 +23,5 @@ Python/pythonmain.c Python/pythonrun.c)
 target_link_libraries(LottePy1 Parser)
 target_link_libraries(LottePy1 Objects)
 target_link_libraries(LottePy1 Modules)
+
+#target_compile_options(LottePy1 PRIVATE -Wall -Wextra)
