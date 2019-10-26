@@ -102,10 +102,6 @@ struct _inittab _PyImport_Inittab[] = {
         {"rgbimg", initrgbimg},
         {"signal", initsignal}, // This one breaks control+c in the terminal
 
-#ifdef WITH_THREAD
-
-#endif
-
 #ifdef WIN32
 	{"msvcrt", initmsvcrt},
 	{"winsound", initwinsound},
